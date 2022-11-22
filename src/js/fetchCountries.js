@@ -7,7 +7,7 @@ export const fetchCountries = name => {
       console.log('No such country');
       throw new Error(response.status);
     }
-    console.log('There is such a country');
+    console.log('Country found');
     return response.json();
   });
 };
