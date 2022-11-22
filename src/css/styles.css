@@ -7,9 +7,20 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
+
   color: #212121;
   line-height: 1.5;
+  background: #d3cce3; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #e9e4f0,
+    #d3cce3
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #e9e4f0,
+    #d3cce3
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #search-box {
@@ -17,4 +28,45 @@ body {
   padding: 8px;
   max-width: 320px;
   margin-bottom: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+#search-box:hover {
+  outline: none;
+  border-color: blueviolet;
+}
+
+li {
+  list-style-type: none;
+}
+
+.country-list {
+  padding: 0px;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.country-list__item,
+.country-info__container {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.country-list__name {
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.country-info__title {
+  padding-left: 10px;
+  margin: 0;
+}
+
+div > p {
+  font-size: 18px;
 }
