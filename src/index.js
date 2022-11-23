@@ -32,7 +32,10 @@ function getCountryByName() {
           renderCountrList(countries);
         }
       })
-      .catch(failureCountryMissing);
+      .catch(() => {
+        failureCountryMissing();
+        updateInterface('', '');
+      });
   } else {
     updateInterface('', '');
   }
